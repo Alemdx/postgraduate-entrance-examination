@@ -6,25 +6,25 @@
 
   **串行工作**
 
-  ![image-20220213221458502](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220213221458502.png)
+  ![image-20220213221458502](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220213221549058.png)
 
 + 接口模块和DMA阶段
 
   **并行工作**
 
-<img src="/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220213221549058.png" alt="image-20220213221549058" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220213221838785.png" alt="image-20220213221549058" style="zoom:67%;" />
 
-![image-20220213221819590](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220213221819590.png)
+![image-20220213221819590](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220213223640116.png)
 
 + 具有通道结构的阶段
 
   **可以看做是一个简单的处理器，有自己的指令系统**
 
-<img src="/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220213221838785.png" alt="image-20220213221838785" style="zoom:67%;" />![image-20220213222218325](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220213222218325.png)
+<img src="https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220213221458502.png" alt="image-20220213221838785" style="zoom:67%;" />![image-20220213222218325](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220213223524775.png)
 
 + 具有I/O处理机的阶段
 
-  ![image-20220213222419003](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220213222419003.png)
+  ![image-20220213222419003](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220213222419003.png)
 
 ## 输入输出系统的组成
 
@@ -36,9 +36,9 @@
 
 **CPU指令的一部分**
 
-<img src="/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220213223524775.png" alt="image-20220213223524775" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216212413431.png" alt="image-20220213223524775" style="zoom:50%;" />
 
-![image-20220213223640116](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220213223640116.png)
+![image-20220213223640116](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220213222218325.png)
 
 #### 通道指令 
 
@@ -82,7 +82,7 @@
 
 ### IO设备与主机的连接方式
 
-+ 辐射式链接![image-20220216212413431](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216212413431.png)
++ 辐射式链接![image-20220216212413431](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216213318888.png)
 
 + 总线连接
 
@@ -94,9 +94,9 @@
 
 cpu查询IO设备是否准备就绪，若未准备就绪，就继续查询。这种情况下，CPU需要等待IO，故而查询的效率不高。**CPU和IO串行工作。**
 
-![image-20220216213318888](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216213318888.png)
+![image-20220216213318888](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220213221819590.png)
 
-![image-20220216215039969](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216215039969.png)
+![image-20220216215039969](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216215039969.png)
 
 ### 程序中断方式
 
@@ -106,9 +106,9 @@ cpu查询IO设备是否准备就绪，若未准备就绪，就继续查询。这
 
 **IO在输入的过程中，仍需要CPU的参与，内存与IO之间还要通过CPU。**
 
-![image-20220216214042812](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216214042812.png)
+![image-20220216214042812](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216214823253.png)
 
-![image-20220216215025971](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216215025971.png)
+![image-20220216215025971](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216215648617.png)
 
 ### DMA方式
 
@@ -116,7 +116,7 @@ cpu查询IO设备是否准备就绪，若未准备就绪，就继续查询。这
 
 类似于数据通过IO预存到DMA控制器中，存完后DMA申请占用总线，存入内存。相比于上一种方式，CPU需要从IO中一个一个取
 
-![image-20220216214823253](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216214823253.png)
+![image-20220216214823253](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216215025971.png)
 
 
 
@@ -124,7 +124,7 @@ cpu查询IO设备是否准备就绪，若未准备就绪，就继续查询。这
 
 ## 概述
 
-![image-20220216215648617](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216215648617.png)
+![image-20220216215648617](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216230502385.png)
 
 ### 外部设备大致分三类
 
@@ -184,11 +184,11 @@ cpu查询IO设备是否准备就绪，若未准备就绪，就继续查询。这
 
 + 状态线
 
-  ![image-20220216230502385](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216230502385.png)
+  ![image-20220216230502385](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216214042812.png)
 
 ### IO接口的基本组成
 
-![image-20220216230931665](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216230931665.png)
+![image-20220216230931665](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216230931665.png)
 
 ## 接口类型
 
@@ -218,13 +218,13 @@ cpu查询IO设备是否准备就绪，若未准备就绪，就继续查询。这
 
 ## 程序查询方式的流程
 
-<img src="/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216231428647.png" alt="image-20220216231428647" style="zoom:67%;" /><img src="/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216231535558.png" alt="image-20220216231535558" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216231428647.png" alt="image-20220216231428647" style="zoom:67%;" /><img src="https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216231535558.png" alt="image-20220216231535558" style="zoom: 50%;" />
 
 
 
 ## 程序查询方式的接口电路
 
-![image-20220216232728075](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216232728075.png)
+![image-20220216232728075](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216234534852.png)
 
 # 程序中断方式
 
@@ -236,7 +236,7 @@ cpu查询IO设备是否准备就绪，若未准备就绪，就继续查询。这
 
 **设备在准备时不做等待**
 
-![image-20220216234534852](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220216234534852.png)
+![image-20220216234534852](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220217003602598.png)
 
 ## 程序中断方式的接口电路
 
@@ -271,13 +271,13 @@ CPU在每条指令执行阶段结束前，向接口中发中断查询信号。
 
 + DMA和CPU交替访问
 
-  ![image-20220217003602598](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220217003602598.png)
+  ![image-20220217003602598](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220217232042074.png)
 
 ## DMA接口的功能和组成
 
 ### DMA接口的功能
 
-![image-20220217232042074](/home/jackson/snap/typora/49/.config/Typora/typora-user-images/image-20220217232042074.png)
+![image-20220217232042074](https://raw.githubusercontent.com/Alemdx/pic-bed/master/coa/image-20220216232728075.png)
 
 ### DMA接口的组成
 
