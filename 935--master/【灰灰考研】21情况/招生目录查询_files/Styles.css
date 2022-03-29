@@ -1,0 +1,189 @@
+a {
+	color: rgb(34, 51, 153); text-decoration: none;
+}
+a:visited {
+	color: rgb(34, 51, 153); text-decoration: none;
+}
+a:hover {
+	color: rgb(255, 85, 85); text-decoration: underline;
+}
+body {
+	margin: 0px; border: 1px solid rgb(92, 107, 172); line-height: 18px; font-family: Arial,????,Arial,Sans-serif; font-size: 12px; -ms-scrollbar-face-color: rgb(219, 238, 221); -ms-scrollbar-3dlight-color: rgb(219, 238, 221); -ms-scrollbar-shadow-color: darkseagreen; -ms-scrollbar-highlight-color: rgb(255, 255, 255); -ms-scrollbar-darkshadow-color: rgb(243, 250, 244); -ms-scrollbar-arrow-color: darkseagreen; -ms-scrollbar-track-color: rgb(243, 250, 244); background-color: rgb(255, 255, 255);
+}
+select {
+	font-size: 12px;
+}
+textarea {
+	border: 1px solid rgb(160, 160, 160); border-image: none; font-size: 12px; background-color: transparent;
+}
+.edbox {
+	border: 1px solid rgb(160, 160, 160); border-image: none; font-size: 12px; background-color: transparent;
+}
+.nbox {
+	padding: 0px 5px 2px; border: 1px solid rgb(119, 119, 119); font-size: 12px; margin-top: 0px; background-color: rgb(255, 255, 255);
+}
+.kbox {
+	padding: 0px 2px 2px 10px; font-size: 12px; margin-top: 0px; background-color: rgb(255, 255, 255);
+}
+.lbox {
+	border: 1px solid rgb(216, 200, 168); padding-top: 0px; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.edline {
+	border: 1px solid steelblue; font-size: 12px; background-color: transparent;
+}
+.ednone {
+	border: currentColor; border-image: none; font-size: 12px; background-color: rgb(212, 228, 216);
+}
+.none {
+	border: currentColor; border-image: none; font-size: 12px; background-color: transparent;
+}
+.edboxdisable {
+	border: 1px solid rgb(170, 170, 170); border-image: none; color: rgb(85, 85, 85); font-size: 12px; background-color: transparent;
+}
+.edlinedisable {
+	border-width: medium medium 1px; border-style: none none solid; border-color: currentColor currentColor rgb(170, 170, 170); border-image: none; color: rgb(85, 85, 85); font-size: 12px; background-color: transparent;
+}
+.ednonedisable {
+	border: currentColor; border-image: none; color: rgb(119, 119, 119); font-size: 12px; background-color: transparent;
+}
+.selectOff {
+	border-width: medium medium 1px; border-style: none none solid; border-color: currentColor currentColor rgb(170, 170, 170); border-image: none; overflow: hidden; font-size: 12px; cursor: default; background-color: transparent;
+}
+.selectOn {
+	border: 1px solid currentColor; border-image: none; left: -1000px; top: -1000px; width: 0px; overflow: hidden; font-family: ????,Helvetica,Arial,Sans-Serif; font-size: 12px; visibility: hidden; position: absolute; z-index: 1; cursor: default; background-color: rgb(240, 240, 240);
+}
+.selectItem {
+	width: 100%; line-height: 16px; font-size: 12px;
+}
+.tdsmall {
+	line-height: 16px; padding-right: 2px; padding-left: 2px; font-size: 12px;
+}
+.td {
+	color: rgb(20, 66, 99); line-height: 20px; padding-right: 2px; padding-left: 2px; font-size: 12px;
+}
+.err {
+	color: red; line-height: 20px; padding-right: 2px; padding-left: 2px; font-size: 12px;
+}
+.white {
+	color: rgb(238, 238, 238); font-size: 12px;
+}
+.titlebar {
+	color: rgb(20, 66, 99); padding-top: 2px;
+}
+.boxtitle {
+	padding: 1px 1px 0px; border: 1px solid rgb(119, 119, 119); border-image: none; text-align: center; color: rgb(238, 238, 238); font-size: 12px; background-color: rgb(72, 101, 145);
+}
+.box {
+	padding: 1px 2px 2px 10px; border: 1px solid rgb(156, 215, 255); font-size: 12px; margin-top: 1px; background-color: rgb(240, 249, 248);
+}
+.boxform {
+	border: 1px solid rgb(119, 119, 119); font-size: 12px; background-color: rgb(240, 240, 240);
+}
+.querybox {
+	border-width: 1px 2px 2px 1px; border-style: solid; border-color: rgb(203, 213, 255); padding: 5px 5px 5px 10px; border-image: none; color: rgb(255, 255, 255); font-size: 12px; background-color: rgb(225, 231, 255);
+}
+.rellink {
+	border: 1px solid rgb(72, 101, 145); border-image: none; font-size: 12px; background-color: rgb(224, 224, 224);
+}
+.outbox {
+	border: 1px solid rgb(0, 0, 0); border-image: none; font-size: 12px; background-color: rgb(255, 255, 133);
+}
+.outTd {
+	border-width: 1px; border-style: solid; border-color: rgb(255, 255, 255) rgb(0, 0, 0) rgb(0, 0, 0) rgb(255, 255, 255); border-image: none; color: rgb(255, 255, 255); font-size: 14pt; background-color: rgb(204, 153, 0);
+}
+.tt2line {
+	color: rgb(32, 16, 0); line-height: 20px; padding-right: 3px; padding-left: 3px; font-size: 12px; border-top-color: rgb(160, 160, 160); border-bottom-color: rgb(160, 160, 160); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.tt1line {
+	color: rgb(48, 32, 16); line-height: 20px; font-size: 12px; font-weight: bold; border-bottom-color: rgb(160, 160, 160); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.ttTable {
+	color: rgb(20, 66, 99); line-height: 20px; font-size: 12px;
+}
+.uname {
+	color: rgb(220, 20, 60); line-height: 20px; font-size: 12px;
+}
+.ttTable1 {
+	color: rgb(64, 48, 32); line-height: 20px; font-size: 12px;
+}
+.button {
+	padding-top: 1px; font-size: 12px;
+}
+.tabhead {
+	color: white; line-height: 18px; font-size: 12px; font-weight: bold; vertical-align: bottom;
+}
+.popwin {
+	border: 1px solid black; border-image: none; width: 300px; height: 100px; visibility: hidden; position: absolute; z-index: 10; background-color: rgb(240, 240, 240);
+}
+.hidden {
+	visibility: hidden; position: absolute;
+}
+.curstep {
+	color: darkblue; font-family: "????","????","Helvetica","Arial"; font-size: 14px; font-weight: bold;
+}
+.tableline {
+	border: 1px solid rgb(92, 107, 172); line-height: 20px; padding-right: 2px; padding-left: 2px; font-size: 12px; border-collapse: collapse;
+}
+.bsbttn {
+	border-width: 1px; border-style: solid; border-color: rgb(175, 196, 213) rgb(16, 74, 123) rgb(16, 74, 123) rgb(175, 196, 213); color: rgb(0, 0, 102); font-family: ????,MS SONG,SimSun,tahoma,sans-serif; font-size: 10pt; text-decoration: none; cursor: hand;
+}
+.tdmail {
+	color: rgb(16, 74, 123); line-height: 20px; font-size: 12px; font-weight: bold;
+}
+.tdstyle {
+	border: 1px currentColor; font-size: 12px; background-color: rgb(240, 249, 248);
+}
+.trstyle {
+	font-size: 12px; background-color: rgb(240, 249, 248);
+}
+.mailbt {
+	color: rgb(0, 0, 153); line-height: 20px; font-size: 12px; font-weight: bold;
+}
+.boxwhite {
+	padding: 5px 0px 10px; border: 1px solid rgb(119, 119, 119); border-image: none; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.nbox {
+	padding: 0px 2px 2px 10px; border: 1px solid rgb(119, 119, 119); font-size: 12px; margin-top: 0px; background-color: rgb(255, 255, 255);
+}
+.kbox {
+	padding: 0px 2px 2px 10px; font-size: 12px; margin-top: 0px; background-color: rgb(255, 255, 255);
+}
+.lbox {
+	border: 1px solid rgb(216, 200, 168); padding-top: 0px; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.ednone1 {
+	border: currentColor; font-size: 12px; background-color: transparent;
+}
+.GridBackColor {
+	border-width: 1px; border-color: rgb(156, 215, 255); line-height: 20px; padding-right: 2px; padding-left: 2px; font-size: 12px; background-color: rgb(255, 255, 255);
+}
+.GridHeadBackColor {
+	background-image: url("../images/title_04.gif");
+}
+.GridItemStyle {
+	
+}
+.TableColor {
+	background-color: gainsboro;
+}
+.TableHeadBackColor {
+	line-height: 20px; font-size: 12px; font-weight: bold; background-color: rgb(191, 223, 212);
+}
+.TitleBackColor {
+	line-height: 20px; font-size: 12px; font-weight: bold; background-color: rgb(66, 143, 143);
+}
+.tableBorder {
+	border: 1px solid rgb(135, 153, 102); border-image: none; width: 100%;
+}
+.tbcolor {
+	line-height: 20px; padding-right: 3px; padding-left: 3px; font-size: 12px; background-color: slategray;
+}
+.tb {
+	font-size: 12px; background-color: rgb(156, 215, 255);
+}
+.desktip {
+	background-color: rgb(0, 0, 0);
+}
+.mypager {
+	line-height: 3px; padding-right: 3px; padding-left: 3px; font-size: 3px;
+}
