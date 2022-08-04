@@ -100,10 +100,11 @@
 ### 常见的一些无穷大的比较
 
 + ![image-20220715225345485](https://raw.githubusercontent.com/Alemdx/pic-bed/master/linear/image-20220715225345485.png)
-
 + ![image-20220715225500349](https://raw.githubusercontent.com/Alemdx/pic-bed/master/linear/image-20220715225500349.png)
-
 + 看函数形式就行，不用考虑数的大小
++ **这里需要特别注意一点**$lim_{x->0} x^ \alpha*ln^ \beta x=0 ；\alpha>0$
+  + 可以用洛必达证
+
 
 ### 无穷大量与无界变量的关系
 
