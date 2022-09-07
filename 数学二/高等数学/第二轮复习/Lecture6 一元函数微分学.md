@@ -193,11 +193,17 @@ https://www.zhihu.com/question/490135702/answer/2153461574
 
 连成连除，开方乘方
 
-### 高阶导数
+### 高阶导数（薄弱环节，难点）
 
-![image-20220829191719955](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math2/image-20220829191719955.png)
++ ![image-20220829191719955](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math2/image-20220829191719955.png)
 
 注意第四个公式。
+
++ 求一阶、二阶，用数学归纳法推导
++ **泰勒公式的展开**
+  + **一般是用来求具体点（尤其是在零点）**
+
+![image-20220906222403345](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math2/image-20220906222403345.png)
 
 # 常见题型
 
@@ -317,3 +323,4 @@ https://www.zhihu.com/question/490135702/answer/2153461574
 + 先证明该函数的一阶导数存在。
 + 再证明该函数的一阶导函数是连续的。
 + 这其实是一个充分必要条件
+
