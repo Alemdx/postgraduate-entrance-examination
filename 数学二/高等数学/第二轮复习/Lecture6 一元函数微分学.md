@@ -150,6 +150,11 @@ https://www.zhihu.com/question/490135702/answer/2153461574
 
 ## 求导法则
 
++ 本质上就两条：
+  + 加减乘除
+  + 复合函数求导法
+    + 其余的都可以看做是复合函数求导法的应用	
+
 ### 有理运算
 
 ![image-20220829185309128](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math2/image-20220829185309128.png)
