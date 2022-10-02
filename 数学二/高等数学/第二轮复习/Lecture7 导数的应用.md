@@ -8,6 +8,8 @@
 
 + 注意，这里如果是零点定理，一般不会出现可导的情况
 
++ 注意，柯西定理里的kesi是同一个kesi。需要与积分里的相区分。mark一下
+
 ![image-20220907211310799](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math2/image-20220907211310799.png)
 
 ### **本质**
