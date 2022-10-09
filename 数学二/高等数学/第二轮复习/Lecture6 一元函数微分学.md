@@ -344,7 +344,7 @@ https://www.zhihu.com/question/490135702/answer/2153461574
 
 ![image-20220920224109880](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math3/image-20220920224109880.png)
 
-如果是要求二阶导数，就两端同时对x求导。但是要注意的是，右端是一个复合函数求导。
+**如果是要求二阶导数，就两端同时对x求导。但是要注意的是，右端是一个复合函数求导。**
 
 ![image-20220921210932873](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math3/image-20220921210932873.png)
 
