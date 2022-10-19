@@ -466,12 +466,14 @@ public static long gcd( long m, long n ){
 public static void preOrder(Node root){
         if(root == null)return;
         Stack<Node> s = new Stack<Node>();
+    //执行的条件是只要有一个满足就行了。
         while(root != null||!s.isEmpty()){
             while(root != null){
                 System.out.print(root.value + " ");
                 s.push(root);//先访问再入栈
                 root = root.left;
             }
+            //出栈处理右子树
             root = s.pop();
             root = root.right;//如果是null，出栈并处理右子树
         }
@@ -520,7 +522,7 @@ public void postOrderRec(Node root) {
     }
 ```
 
-#### 按层次遍历-栈
+#### 按层次遍历-队列
 
 ```java
 public static void levelTravel(Node root){
