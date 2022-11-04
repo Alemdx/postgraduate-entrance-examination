@@ -420,11 +420,13 @@ public static long gcd( long m, long n ){
 
 ### 边和点的关系式
 
+(ydj这里是从第0层开始算)
+
 对m阶树而言
 
 - $e = n - 1$
 - 第i层最多有 $m^i$个元素
-- 树中最少有 $h+1$个元素，最多有$m^h - 1$个元素
+- 树中最少有 $h+1$个元素，最多有$m^h - 1$个元素（false）
 - $n_0=n_2 + 1$，下标指的是度数
 - $ n - 1 \ge h \ge \lceil log2(n+1) \rceil-1 $
 
@@ -491,6 +493,7 @@ public static void inOrder(Node root){
                 s.push(root);
                 root = root.left;
             }
+            //在pop的时候输出
             root = s.pop();
             System.out.print(root.value + " ");
             root = root.right;//如果是null，出栈并处理右子树
@@ -648,6 +651,8 @@ public static void levelTravel(Node root){
 
 ### 线段树
 
+画线段树时，先按照正常遍历的顺序来。然后在进行修改。比如说某个有左右子树，那么它就没法画后继和前驱结点。于是将它后面一个结点的前驱设为它就行了。
+
 #### 节点
 
 | left | left thread         | data | right thread        | right  |
@@ -706,7 +711,7 @@ template<class Type>
 
 1）信息的总长度最短。
 
-2）为了译码，任一字符的编码不应是另一字符的编码的前缀
+2）为了译码，**任一字符的编码不应是另一字符的编码的前缀**
 
 算法：利用Huffman算法，把频率作为外部结点的权，构造具有最小带权外路径长度的扩充二叉树，把每个结点的左子女的边标上0，右子女标上1。这样从根到每个叶子的路径上的号码连接起来，就是外结点的字符编码。
 
@@ -721,12 +726,14 @@ public Huffman(int a[]) {
     heap = new MinHeap(a);
 
     for(int i=0; i<a.length-1; i++) {   
+        //找出最小的两个结点
         HuffmanNode left = heap.dumpFromMinimum();  // 最小节点是左孩子
         HuffmanNode right = heap.dumpFromMinimum(); // 其次才是右孩子
 
         // 新建parent节点，左右孩子分别是left和right；
         // parent的大小是左右孩子之和
         parent = new HuffmanNode(left.key+right.key, left, right, null);
+        //将下面两个结点与父节点链接起来。
         left.parent = parent;
         right.parent = parent;
 
@@ -822,7 +829,7 @@ $C_0k_1C_1k_2……k_pC_p$
 
 ### B树、* B+树：平衡的m叉搜索树
 
-重点：增/删节点时兄弟节点/父子节点之间的合并
+重点：**增/删节点时兄弟节点/父子节点之间的合并**
 
 除根节点外，每一个节点里最少有 $\lceil \frac{m}{2} \rceil - 1$ 个分隔值和 $\lceil \frac{m}{2} \rceil$ 个子节点，但所有节点最多只能有 $m - 1$ 个分隔值和  $m$ 个子节点。
 
@@ -843,8 +850,8 @@ $C_0k_1C_1k_2……k_pC_p$
 
 1. 如果节点拥有的元素数量小于最大值，那么有空间容纳新的元素。将新元素插入到这一节点，且保持节点中元素有序。
 2. 否则的话这一节点已经满了，将它平均地分裂成两个节点：
-   1. 从该节点的原有元素和新的元素中选择出中位数
-   2. 小于这一中位数的元素放入左边节点，大于这一中位数的元素放入右边节点，中位数作为分隔值。
+   1. 从该节点的原有元素和新的元素中**选择出中位数**
+   2. **小于这一中位数的元素放入左边节点，大于这一中位数的元素放入右边节点，中位数作为分隔值。**
    3. 分隔值被插入到父节点中，这可能会造成父节点分裂，分裂父节点时可能又会使它的父节点分裂，以此类推。如果没有父节点（这一节点是根节点），就创建一个新的根节点（增加了树的高度）。
 
 如果分裂一直上升到根节点，那么一个新的根节点会被创建，它有一个分隔值和两个子节点。
@@ -855,7 +862,7 @@ $C_0k_1C_1k_2……k_pC_p$
 
 >  **或者** 从上到下处理这棵树，在进入一个节点之前，调整树使得之后一旦遇到了要删除的键，它可以被直接删除而不需要再进行调整（没讲）
 
-###### 借
+###### 借( 兄弟结点元素够)
 
 - 如果缺少元素节点的右兄弟存在且拥有多余的元素，那么向左旋转
 
@@ -871,12 +878,12 @@ $C_0k_1C_1k_2……k_pC_p$
 
 ###### 补
 
-- 如果它的两个直接兄弟节点都只有最小数量的元素，那么将它与一个直接兄弟节点以及父节点中它们的分隔值合并
+- 如果它的两个直接兄弟节点都只有最小数量的元素，那么将它与一个直接兄弟节点以及父节点中它们的分隔值合并(直接合并，不需要把父节点拉下来。)
 
   1. 将分隔值复制到左边的节点（左边的节点可以是缺少元素的节点或者拥有最小数量元素的兄弟节点）
   2. 将右边节点中所有的元素移动到左边节点（左边节点现在拥有最大数量的元素，右边节点为空）
   3. 将父节点中的分隔值和空的右子树移除（父节点失去了一个元素）
-     - 如果父节点是根节点并且没有元素了，那么释放它并且让合并之后的节点成为新的根节点（树的深度减小）
+     - **如果父节点是根节点并且没有元素了，那么释放它并且让合并之后的节点成为新的根节点（树的深度减小**）
      - 否则，如果父节点的元素数量小于最小值，重新平衡父节点
 
 
@@ -927,12 +934,16 @@ template<class T> void MaxHeap<T>::Initialize (T a[],int size,int ArraySize){
     CurrentSize=Size;
     MaxSize=ArraySize;
     for( int i=CurrentSize/2; i>=1; i--){ // 注意一下是从最后开始 
-        T y=heap[i]; 
+        T y=heap[i];
+        //第一次循环时C是指向最后一个元素
         int c=2*i;
         while(c<=CurrentSize){ 
-            if(c<CurrentSize && heap[c]<heap[c+1]) c++;
+            if(c<CurrentSize && heap[c]<heap[c+1]) c++;//使c指向较大的叶节点
+            //y是它的父节点，如果父节点大于子节点，就结束
             if(y>=heap[c]) break;
+            //否则交换父子结点
             heap[c/2] = heap[c];
+            //c变成其子节点
             c*=2;
         }   
 	heap[c/2]=y;
@@ -951,6 +962,8 @@ template<class T> void MaxHeap<T>::Initialize (T a[],int size,int ArraySize){
 ### 并查集
 
 > 重点在使用，一般不单独考察内部具体实现。
+
+算法原理：初始一个数组，数组里面的每个元素各自为政。査找两个元素是不是在同一个集合里面。如何判断两个元素在不在同一个集合？如果两个元素在同一个集合里面，他们的父节点是相等的。如果不再同一个集合里面，就进行合并。具体做法就是把一个集合的父亲设置为另一个集合的父亲。
 
 #### 主要操作
 
@@ -1248,7 +1261,16 @@ public int[][] Alllength(int n){
 }
 ```
 
+拓扑排序和深搜可以判断图中有无环。
 
+### 拓扑排序
+
+- 在判断无向图中是否存在环时，是将所有**度 <= 1** 的结点入队；
+- 在判断有向图中是否存在环时，是将所有**入度 = 0** 的结点入队。
+
+### DFS判断有无环
+
+有向和无向
 
 ### 找出有向图中所有的环
 
@@ -1330,7 +1352,7 @@ public class GetAllCyclesForDirectedGraph{
 
 拓扑排序可以检测环路是否存在（但不能给出具体的环路）。拓扑排序不唯一。
 
-搞一个队列，每次都把图中入度为0的节点加入队列中而后在图中删去这些点的所有出边直到表中没有顶点为止。如果出现了图中还有顶点但是无入度为0的点的情况，说明图中有环路。算法用到了队列（栈也可以）可以复习下静态链表（数组实现的链表）
+搞一个队列，**每次都把图中入度为0的节点加入队列中**而后在图中删去这些点的所有出边直到表中没有顶点为止。如果出现了**图中还有顶点但是无入度为0的点**的情况，说明图中有环路。算法用到了队列（栈也可以）可以复习下静态链表（数组实现的链表）
 
 ```java
 public void topSort( ) throws CycleFound{
@@ -1338,14 +1360,18 @@ public void topSort( ) throws CycleFound{
     int counter = 0;
     Vertex v, w;
     q = new Queue( );
+    //一次性把所有入度为0的点都加进去
     for (Vertex v:NodeTable)
         if( v.indegree == 0 )
             q.enqueue( v );
     while( !q.isEmpty( ) ){
         v = q.dequeue( );
         v.topNum = ++counter; //Assign next number
+        //遍历点V的每一条边
         for(Edge e = v.adj; e != null; e = e.next){
+            //w是边的另一个端点
             w = e.dest;
+            //如果该点的入度为0,就加入队列
             if( --w.indegree = = 0 ) q.enqueue(w);
         }
     }
@@ -1376,9 +1402,9 @@ public void topSort( ) throws CycleFound{
 
 #### 对事件而言
 
-$Ve[i]$－表示事件$Vi$的可能最早发生时间，定义为从源点$V_0$ → $V_i$的最长路径长度，（得满足前置条件）
+$Ve[i]$－表示事件$Vi$的可能最早发生时间，**定义为从源点$V_0$ → $V_i$的最长路径长度**，（得满足前置条件,**前面所有的都得完成，所以是最长路径**）
 
-$Vl[i]$－表示事件$Vi$的允许的最晚发生时间。是在保证汇点$Vn-1$在$Ve[n-1]$完成的前提下，事件Vi允许发生的最晚时间，即$Ve[n-1]－Vi → V_{n－1}$的最长路径长度。（不能拖后腿）
+$Vl[i]$－表示事件$Vi$的允许的最晚发生时间。是在保证汇点$Vn-1$在$Ve[n-1]$完成的前提下，事件Vi允许发生的最晚时间，即$Ve[n-1]－Vi → V_{n－1}$的最长路径长度。（不能拖后腿，这个是反过来推的。）
 
 #### 对活动而言
 
@@ -1394,7 +1420,7 @@ s[k] = l[k]-e[k]
 $$
 $s[k] = 0$ 表示这是一个关键活动。
 
-以上的计算必须在拓扑有序及逆拓扑有序的前提下进行。求$Ve[i]$必须使$V_i$的所有前驱结点的$V_e$都求得求$Vl[i]$必须使$Vi$的所有后继结点最晚发生时间都求得。
+以上的计算必须在拓扑有序及逆拓扑有序的前提下进行。**求$Ve[i]$必须使$V_i$的所有前驱结点的$V_e$都求得求$Vl[i]$必须使$Vi$的所有后继结点最晚发生时间都求得。**
 
 # 第九章 排序
 
@@ -1404,7 +1430,7 @@ $s[k] = 0$ 表示这是一个关键活动。
 
 内排序：对内存中的n个对象进行排序。
 
-外排序：内存放不下，还要使用外存的排序。
+外排序：内存放不下，**还要使用外存的排序**。
 
 ## ==二分法插入排序== - $O(n^2)$
 
@@ -1422,6 +1448,8 @@ $s[k] = 0$ 表示这是一个关键活动。
 
 ### 关键：增量的选取
 
+![image-20221103204515359](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math3/image-20221103204515359.png)
+
 ###### 不稳定
 
 > 关键思想：分组排序
@@ -1434,11 +1462,11 @@ Donald Shell最初建议步长选择为${\displaystyle {\frac {n}{2}}}$并且对
 
 ```java
 public static void shellsort( Comparable [ ] a ){
-    for ( int gap = a.length / 2; gap > 0; gap /= 2 )
-        for ( int i = gap; i < a.length; i++ ){
-            Comparable tmp = a[ i ];
-            int j = i;
-            for ( ; j >= gap && tmp.compareTo( a[ j-gap ] ) < 0; j -= gap )
+    for ( int gap = a.length / 2; gap > 0; gap /= 2 )//gap表示的是每组有的元素个数
+        for ( int i = gap; i < a.length; i++ ){//从第二组的第一个元素向后遍历，知道数组结束
+            Comparable tmp = a[ i ];//标记当前的元素为tmp，与其他和她相差Kgap的数相比较
+            int j = i;//同样记录当前元素的坐标，为gap的基准
+            for ( ; j >= gap && tmp.compareTo( a[ j-gap ] ) < 0; j -= gap )//如果他比前面相差gap的元素小，则将那个元素移动到它的位置（说到底就是从这个元素开始，和之前的kgap个元素进行比较）
                 a[ j ] = a[ j –gap ];
             a[ j ] = tmp;
         }
@@ -1458,10 +1486,14 @@ public static void shellsort( Comparable [ ] a ){
 2）对左边和右边（子序列）分别再用快排序。
 
 ```c++
+//快排是分区间归类，区间越来越小。而分治是先把区间划到最小，再对区间进行排序
 template <class Type> void QuickSort( datalist <Type>& list, const int left, const int right ){
     if (left<right){
+        //选取一个基准,在partition函数里面，按照基准进行分类。
         int pivotpos=partition (list, left, right);
+        //对左边使用快排
         QuickSort(list, left, pivotpos-1);
+        //对右边使用快排
         QuickSort(list, pivotpos+1, right);
     }
 }
