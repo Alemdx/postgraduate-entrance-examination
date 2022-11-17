@@ -85,9 +85,13 @@
 
 + 反三角函数的图像（高中没学过）
   + 这里要注意，正余弦函数只有这么一段，因为x的定义域是固定的。
-  + ![image-20220713213847941](https://raw.githubusercontent.com/Alemdx/pic-bed/master/linear/image-20220713213847941.png)
-  + ![image-20220713213904549](https://raw.githubusercontent.com/Alemdx/pic-bed/master/linear/image-20220713213904549.png)
-  + ![image-20220713213922916](https://raw.githubusercontent.com/Alemdx/pic-bed/master/linear/image-20220713213922916.png)
+
+
+![image-20221114174020064](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math3/image-20221114174020064.png)
+
++ ![image-20220713213847941](https://raw.githubusercontent.com/Alemdx/pic-bed/master/linear/image-20220713213847941.png)
++ ![image-20220713213904549](https://raw.githubusercontent.com/Alemdx/pic-bed/master/linear/image-20220713213904549.png)
++ ![image-20220713213922916](https://raw.githubusercontent.com/Alemdx/pic-bed/master/linear/image-20220713213922916.png)
 
 + 奇偶性经过加减乘之后的变化
 

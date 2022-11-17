@@ -358,6 +358,8 @@ https://www.zhihu.com/question/490135702/answer/2153461574
 
 ![image-20220921212631573](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math3/image-20220921212631573.png)
 
++ **一般直接求需要进行配凑，把相乘改成相加的形式。**
+
 # 补充
 
 ## 证明某函数有连续一阶导数
