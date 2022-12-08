@@ -58,3 +58,22 @@
 ## 与二重积分有关的综合题（难题）
 
 ## 与二重积分有关的不等式（难题）
+
+## 二重积分的分部积分
+
+优先考虑第一种方法
+
+### 对局部进行分部积分
+
+参考2011年21题
+
++ 局部分部积分
++ 交换积分次序
+
+### 对整体进行分部积分
+
+有一定的使用条件，但是一般情况下好像可以直接使用
+
+![image-20221130092402845](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math3/image-20221130092402845.png)
+
+![image-20221130092436703](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math3/image-20221130092436703.png)
