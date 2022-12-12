@@ -26,6 +26,8 @@ $y'=f(x)g(y)$
 
 将xy的微分方程转换为xu的微分方程。**关键在于令u=y/x，并对x进行求导**
 
+注意是y/x还是x/y 复杂度不一样
+
 ## 线性方程
 
 ![image-20221005112408370](https://raw.githubusercontent.com/Alemdx/pic-bed/master/math3/image-20221005112408370.png)
